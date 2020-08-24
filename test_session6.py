@@ -130,6 +130,7 @@ def test_lenth_of_created_cards():
 
 def test_length_of_sequence_players():
     q1=session6.pokerstar(4,2,['acehearts','queenclubs','6hearts','4spades'],['kinghearts','kingspades','9daimonds'])
-	assert q1=='please enter the same length for sequence of cards for both players'
+    assert q1=='please enter the same length for sequence of cards for both players'
+
 
 
