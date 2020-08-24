@@ -27,11 +27,11 @@ def test_identation():
         assert len(re.sub(r'[a-zA-Z#@\n\"\']', '', space)) % 4 == 0, \
         "Your code intentation does not follow PEP8 guidelines"
 
-
+'''
 def test_docstring():
     q1=session6.poker.__doc__
     assert q1 is not None
-
+'''
 
 def test_annotation():
     q1=session6.pokerstar.__annotations__
@@ -133,7 +133,7 @@ def test_length_of_sequence_players():
     assert q1=='please enter the same length for sequence of cards for both players'
 
 
-def create_cards_using_lambda():
+def test_creation_cards_using_lambda():
     cards = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace']
     suits = ['spades', 'clubs', 'hearts', 'diamonds']
     final = zip((lambda x: x+x+x+x)(cards), (lambda y:y+y+y+y+y+y+y+y+y+y+y+y+y)(suits))
