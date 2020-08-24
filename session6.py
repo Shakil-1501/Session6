@@ -22,7 +22,7 @@ def poker(vals,suits):
 
 
 
-def poker_star(no_of_card:'int',no_of_player:'int',sequence_cardsA:'list',sequence_cardsB:'list') ->'winner of the game':
+def pokerstar(no_of_card:'int',no_of_player:'int',sequence_cardsA:'list',sequence_cardsB:'list') ->'winner of the game':
     """returns p
     some additional documentation
 
