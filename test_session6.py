@@ -107,3 +107,19 @@ def test_number_of_player():
     q1=session6.pokerstar(5,3,['acehearts','queenclubs','6hearts','4spades'],['kinghearts','kingspades','9daimonds','8spades'])
     assert q1=='please enter correct number of players'
 
+
+def test_winner_in_three_pair_card():
+    q1=session6.pokerstar(3,2,['acehearts','queenclubs','6hearts'],['kinghearts','kingspades','9daimonds'])
+    assert q1=='Player B is winner'
+
+
+def test_winner_in_four_pair_card():
+    q1=session6.pokerstar(3,2,['acehearts','queenclubs','6hearts','4spades'],['kinghearts','kingspades','9daimonds'])
+    assert q1=='Player B is winner'
+
+
+def test_winner_in_five_pair_card():
+    q1=session6.pokerstar(3,2,['acehearts','queenclubs','6hearts','4spades','2diamonds'],['kinghearts','kingspades','9daimonds','4hearts'])
+    assert q1=='Player B is winner'
+
+
