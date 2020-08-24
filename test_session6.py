@@ -98,3 +98,12 @@ def test_created_cards():
     'acediamonds']
 
 
+def test_number_of_card():
+    q1=session6.pokerstar(7,2,['acehearts','queenclubs','6hearts','4spades'],['kinghearts','kingspades','9daimonds','8spades'])
+    assert q1=='please enter correct number of card'
+
+
+def test_number_of_player():
+    q1=session6.pokerstar(5,3,['acehearts','queenclubs','6hearts','4spades'],['kinghearts','kingspades','9daimonds','8spades'])
+    assert q1=='please enter correct number of players'
+
