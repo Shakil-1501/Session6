@@ -3,6 +3,7 @@ from decimal import Decimal
 import math
 import cmath
 
+README_CONTENT_CHECK_FOR = ['Session6']
 
 def test_readme_exists():
     assert os.path.isfile("README.md"), "README.md file missing!"
@@ -13,11 +14,11 @@ def test_funcation_had_cap_letter():
     for function in functions:
         assert len(re.findall('([A-Z])', function[0])) == 0, "You have used Capital letter(s) in your function names"
 
-
+'''
 def check_docstring():
     q = session6.poker_star.__doc__
     assert q!=None
-
+'''
 
 def test_identation():
     lines = inspect.getsource(session6)
@@ -27,11 +28,11 @@ def test_identation():
         assert len(re.sub(r'[a-zA-Z#@\n\"\']', '', space)) % 4 == 0, \
         "Your code intentation does not follow PEP8 guidelines"
 
-'''
+
 def test_docstring():
     q1=session6.poker.__doc__
     assert q1 is not None
-'''
+
 
 def test_annotation():
     q1=session6.pokerstar.__annotations__
@@ -153,6 +154,34 @@ def test_A_winner_in_five_pair_card():
 def test_A_winner_in_four_pair_card():
     q1=session6.pokerstar(4,2,['kinghearts','kingspades','9daimonds','8spades'],['acehearts','queenclubs','6hearts','4spades'])
     assert q1=='Player A is winner'
+
+
+def test_readme_words_counts():
+    readme = open('README.md','r')
+    readme_words = readme.read().split()
+    readme.close()
+    assert len(readme_words) >= 100 , "Kindly define README properly"
+
+
+
+def test_readme_proper_desscription():
+    READMELOOKSGOOD = True
+    readme = open('README.md','r')
+    readme_words = readme.read().split()
+    readme.close()
+    for words in README_CONTENT_CHECK_FOR:
+        if words not in readme_words:
+            READMELOOKSGOOD = False
+            pass
+    assert READMELOOKSGOOD == True , "You have not defined all functions/classes in README.md"
+
+
+
+def test_readme_for_formatting():
+    readme = open('README.md','r')
+    content = readme.read()
+    readme.close()
+    assert content.count('#') >= 5 , "Kindly format the README.md"
 
 
 
