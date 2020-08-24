@@ -33,3 +33,12 @@ def test_docstring():
     assert q1 is not None
 
 
+def check_annotation():
+    q1=session6.poker_star.__annotations__
+    assert q1 == {'no_of_card': 'int',
+    'no_of_player': 'int',
+    'return': 'winner of the game',
+    'sequence_cardsA': 'list',
+    'sequence_cardsB': 'list'}
+
+
