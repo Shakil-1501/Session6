@@ -5,7 +5,7 @@ import weakref
 import random
 from math import tan, pi
 
-def poker(vals,suits)
+def poker(vals,suits):
     '''
     returns the list of 52 created cards in a deck
 
