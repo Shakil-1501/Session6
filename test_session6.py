@@ -28,3 +28,8 @@ def test_identation():
         "Your code intentation does not follow PEP8 guidelines"
 
 
+def test_docstring():
+    q1=session6.poker.__doc__
+    assert q1 is not None
+
+
