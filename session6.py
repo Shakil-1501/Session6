@@ -40,7 +40,7 @@ def pokerstar(no_of_card:'int',no_of_player:'int',sequence_cardsA:'list',sequenc
     i=['kinghearts','kingspades','9daimonds','8spades','4hearts']
     j=['acehearts','queenclubs','6hearts','4spades','2diamonds']
 
-    if len(sequence_cardA)==len(sequence_cardsB):
+    if len(sequence_cardsA)==len(sequence_cardsB):
         if no_of_player==2:
             if no_of_card==3:
                 if sequence_cardsA == a[0:3]:
