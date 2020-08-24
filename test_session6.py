@@ -133,4 +133,29 @@ def test_length_of_sequence_players():
     assert q1=='please enter the same length for sequence of cards for both players'
 
 
+def create_cards_using_lambda():
+    cards = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace']
+    suits = ['spades', 'clubs', 'hearts', 'diamonds']
+    final = zip((lambda x: x+x+x+x)(cards), (lambda y:y+y+y+y+y+y+y+y+y+y+y+y+y)(suits))
+    list(final) is not None
+
+
+def test_A_winner_in_three_pair_card():
+    q1=session6.pokerstar(3,2,['kinghearts','kingspades','9daimonds'],['acehearts','queenclubs','6hearts'])
+    assert q1=='Player A is winner'
+
+
+def test_A_winner_in_five_pair_card():
+    q1=session6.pokerstar(5,2,['kinghearts','kingspades','9daimonds','8spades','4hearts'],['acehearts','queenclubs','6hearts','4spades','2diamonds'])
+    assert q1=='Player A is winner'
+
+
+def test_A_winner_in_four_pair_card():
+    q1=session6.pokerstar(4,2,['kinghearts','kingspades','9daimonds','8spades'],['acehearts','queenclubs','6hearts','4spades'])
+    assert q1=='Player A is winner'
+
+
+
+
+
 
