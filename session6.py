@@ -42,7 +42,7 @@ def pokerstar(no_of_card:'int',no_of_player:'int',sequence_cardsA:'list',sequenc
 
     if len(sequence_cardA)==len(sequence_cardsB):
         if no_of_player==2:
-            if no_of_card==3:
+            if no_of_card==3:
                 if sequence_cardsA == a[0:3]:
                     p="Player A is winner"
                 elif sequence_cardsA == b[0:3] and sequence_cardsB!=a[0:3] :
