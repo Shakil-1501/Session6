@@ -123,3 +123,13 @@ def test_winner_in_five_pair_card():
     assert q1=='Player B is winner'
 
 
+def test_lenth_of_created_cards():
+    q1=session6.poker(['2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace'],['spades', 'clubs', 'hearts', 'diamonds'])
+    assert len(q1)==52
+
+
+def test_length_of_sequence_players():
+    q1=session6.pokerstar(4,2,['acehearts','queenclubs','6hearts','4spades'],['kinghearts','kingspades','9daimonds'])
+	assert q1=='please enter the same length for sequence of cards for both players'
+
+
