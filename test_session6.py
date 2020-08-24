@@ -23,6 +23,6 @@ def test_identation():
         "Your code intentation does not follow PEP8 guidelines"
 
 
-def check_docstrings():
+def check_docstring():
     q = session6.poker_star.__doc__
     assert q != None
