@@ -14,6 +14,11 @@ def test_funcation_had_cap_letter():
         assert len(re.findall('([A-Z])', function[0])) == 0, "You have used Capital letter(s) in your function names"
 
 
+def check_docstring():
+    q = session6.poker_star.__doc__
+    assert q!=None
+
+
 def test_identation():
     lines = inspect.getsource(session6)
     spaces = re.findall('\n +.', lines)
@@ -23,6 +28,3 @@ def test_identation():
         "Your code intentation does not follow PEP8 guidelines"
 
 
-def check_docstring():
-    q = session6.poker_star.__doc__
-    assert q!=None
