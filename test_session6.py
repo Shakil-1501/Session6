@@ -24,5 +24,5 @@ def test_identation():
 
 
 def check_docstrings():
-    q=session6.poker_star.__doc__
-    assert q!=None
+    q = session6.poker_star.__doc__
+    assert q != None
