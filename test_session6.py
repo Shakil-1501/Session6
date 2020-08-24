@@ -133,10 +133,10 @@ def test_length_of_sequence_players():
     assert q1=='please enter the same length for sequence of cards for both players'
 
 
-def test_creation_cards_using_lambda():
-    cards = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace']
+def test_creation_cards_using_lambdas():
+    vals = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king', 'ace']
     suits = ['spades', 'clubs', 'hearts', 'diamonds']
-    final = zip((lambda x: x+x+x+x)(cards), (lambda y:y+y+y+y+y+y+y+y+y+y+y+y+y)(suits))
+    final = zip((lambda x: x+x+x+x)(vals), (lambda y:y+y+y+y+y+y+y+y+y+y+y+y+y)(suits))
     type(final) is zip
 
 
